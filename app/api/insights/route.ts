@@ -10,17 +10,17 @@ export async function GET(request: NextRequest) {
 
         let insights = [...mockInsights];
 
-        // Filter by category
+
         if (category && category !== 'all') {
             insights = insights.filter(i => i.category === category);
         }
 
-        // Filter by priority
+
         if (priority && priority !== 'all') {
             insights = insights.filter(i => i.priority === priority);
         }
 
-        // Sort by timestamp (newest first)
+
         insights.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
         return NextResponse.json({

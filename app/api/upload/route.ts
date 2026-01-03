@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Validate file type
+
         const validTypes = ['audio/mpeg', 'audio/wav', 'audio/mp4', 'audio/webm', 'audio/x-m4a'];
         if (!validTypes.includes(file.type)) {
             return NextResponse.json(
@@ -24,19 +24,19 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Create uploads directory if it doesn't exist
+
         const uploadsDir = join(process.cwd(), 'uploads');
         if (!existsSync(uploadsDir)) {
             await mkdir(uploadsDir, { recursive: true });
         }
 
-        // Generate unique file ID
+
         const fileId = `${Date.now()}-${Math.random().toString(36).substring(7)}`;
         const fileName = file.name;
         const fileExtension = fileName.split('.').pop();
         const filePath = join(uploadsDir, `${fileId}.${fileExtension}`);
 
-        // Convert file to buffer and save
+
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
         await writeFile(filePath, buffer);
@@ -56,8 +56,3 @@ export async function POST(request: NextRequest) {
     }
 }
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};

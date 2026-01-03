@@ -41,7 +41,7 @@ body {
   position: relative;
 }
 
-/* Animated mesh gradient background */
+
 body::before {
   content: '';
   position: fixed;
@@ -74,7 +74,7 @@ body::before {
   }
 }
 
-/* Floating particles */
+
 body::after {
   content: '';
   position: fixed;
@@ -115,7 +115,7 @@ a {
     text-wrap: balance;
   }
 
-  /* Premium glass effect with 3D depth */
+
   .glass-effect {
     background: rgba(15, 15, 25, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
@@ -139,7 +139,7 @@ a {
         transparent);
   }
 
-  /* Neon gradient text */
+
   .gradient-text {
     background: linear-gradient(135deg,
         var(--neon-blue) 0%,
@@ -168,7 +168,7 @@ a {
     }
   }
 
-  /* 3D hover lift with glow */
+
   .hover-lift {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
@@ -182,7 +182,7 @@ a {
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  /* Neon border animation */
+
   .neon-border {
     position: relative;
     border: 2px solid transparent;
@@ -203,7 +203,7 @@ a {
     }
   }
 
-  /* Shimmer effect */
+
   .shimmer {
     position: relative;
     overflow: hidden;
@@ -233,7 +233,7 @@ a {
     }
   }
 
-  /* Floating animation */
+
   .float {
     animation: float 6s ease-in-out infinite;
   }
@@ -250,7 +250,7 @@ a {
     }
   }
 
-  /* Glow effect */
+
   .glow {
     box-shadow:
       0 0 20px rgba(0, 212, 255, 0.5),
@@ -258,7 +258,7 @@ a {
       0 0 60px rgba(255, 0, 110, 0.2);
   }
 
-  /* Scan line effect */
+
   .scan-lines {
     position: relative;
   }

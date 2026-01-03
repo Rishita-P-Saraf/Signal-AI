@@ -33,10 +33,10 @@ export async function sendDailySummary(results: AnalysisResult[]): Promise<void>
         return;
     }
 
-    // Aggregate all insights
+
     const allInsights = results.flatMap(r => r.insights);
 
-    // Group by category
+
     const insightsByCategory = allInsights.reduce((acc, insight) => {
         if (!acc[insight.category]) {
             acc[insight.category] = [];
@@ -45,7 +45,7 @@ export async function sendDailySummary(results: AnalysisResult[]): Promise<void>
         return acc;
     }, {} as { [key in InsightCategory]: Insight[] });
 
-    // Sort insights by priority within each category
+
     Object.keys(insightsByCategory).forEach(category => {
         insightsByCategory[category as InsightCategory].sort((a, b) => {
             const priorityOrder = { high: 0, medium: 1, low: 2 };
@@ -74,7 +74,7 @@ export async function sendDailySummary(results: AnalysisResult[]): Promise<void>
         },
     ];
 
-    // Add sections for each category
+
     Object.entries(insightsByCategory).forEach(([category, insights]) => {
         if (insights.length === 0) return;
 
@@ -87,7 +87,7 @@ export async function sendDailySummary(results: AnalysisResult[]): Promise<void>
             },
         });
 
-        // Show top 3 insights per category
+
         insights.slice(0, 3).forEach(insight => {
             blocks.push({
                 type: 'section',
@@ -115,7 +115,7 @@ export async function sendDailySummary(results: AnalysisResult[]): Promise<void>
         });
     });
 
-    // Add call to action
+
     blocks.push({
         type: 'section',
         text: {

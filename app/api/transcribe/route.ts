@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     try {
         const { fileId, useMock } = await request.json();
 
-        // For demo purposes, use mock transcription if requested
+
         if (useMock) {
             const transcription = await generateMockTranscription();
             return NextResponse.json({
@@ -24,15 +24,15 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Read the uploaded file
+
         const uploadsDir = join(process.cwd(), 'uploads');
         const files = await readFile(uploadsDir, 'utf-8').catch(() => null);
 
-        // Find the file with matching ID
+
         const filePath = join(uploadsDir, fileId);
         const audioBuffer = await readFile(filePath);
 
-        // Determine MIME type from file extension
+
         const extension = fileId.split('.').pop()?.toLowerCase();
         const mimeTypes: { [key: string]: string } = {
             'mp3': 'audio/mpeg',
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
         };
         const mimeType = mimeTypes[extension || ''] || 'audio/mpeg';
 
-        // Transcribe using Gemini
+
         const transcription = await transcribeAudio(audioBuffer, mimeType);
 
         return NextResponse.json({

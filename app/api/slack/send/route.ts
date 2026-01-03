@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     try {
         const { test, results } = await request.json();
 
-        // Send test message
+
         if (test) {
             await sendTestMessage();
             return NextResponse.json({
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
             });
         }
 
-        // Send daily summary
+
         const analysisResults = results || [mockAnalysisResult];
         await sendDailySummary(analysisResults);
 

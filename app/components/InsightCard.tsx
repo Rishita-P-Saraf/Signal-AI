@@ -65,10 +65,10 @@ export default function InsightCard({ insight }: InsightCardProps) {
 
     return (
         <div className={`glass-effect rounded-2xl p-8 hover-lift relative overflow-hidden group border-2 ${categoryBorderColors[insight.category]} border-opacity-30`}>
-            {/* Background gradient on hover */}
+
             <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[insight.category]} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
 
-            {/* Scan line effect */}
+
             <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-neon-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="relative z-10">

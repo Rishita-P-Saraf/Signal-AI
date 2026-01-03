@@ -100,9 +100,9 @@ export default function Home() {
     return (
         <main className="min-h-screen p-8 relative z-10">
             <div className="max-w-7xl mx-auto">
-                {/* Premium Header with Floating Elements */}
+
                 <div className="text-center mb-16 relative">
-                    {/* Floating orbs */}
+
                     <div className="absolute -top-10 left-1/4 w-40 h-40 bg-neon-blue rounded-full blur-3xl opacity-20 float"></div>
                     <div className="absolute -top-10 right-1/4 w-40 h-40 bg-neon-purple rounded-full blur-3xl opacity-20 float" style={{ animationDelay: '2s' }}></div>
 
@@ -130,7 +130,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Upload Section */}
+
                 <div className="mb-12">
                     <UploadZone
                         onUploadComplete={handleUploadComplete}
@@ -138,16 +138,16 @@ export default function Home() {
                     />
                 </div>
 
-                {/* Processing Status */}
+
                 {processingStatus && (
                     <div className="mb-12">
                         <ProcessingStatusComponent status={processingStatus} />
                     </div>
                 )}
 
-                {/* Main Content Grid */}
+
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Insights Dashboard */}
+
                     <div className="lg:col-span-2">
                         <div className="glass-effect rounded-3xl p-8 mb-8 scan-lines relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-neon-purple rounded-full blur-3xl opacity-10"></div>
@@ -159,7 +159,7 @@ export default function Home() {
                                     <h2 className="text-4xl font-bold gradient-text">Insights Dashboard</h2>
                                 </div>
 
-                                {/* Filters */}
+
                                 <div className="flex flex-wrap gap-6 mb-10">
                                     <div className="flex-1 min-w-[200px]">
                                         <label className="block text-sm text-gray-400 mb-3 font-semibold uppercase tracking-wider">Category</label>
@@ -199,7 +199,7 @@ export default function Home() {
                                     </div>
                                 </div>
 
-                                {/* Stats Cards */}
+
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
                                     <div className="glass-effect rounded-2xl p-6 text-center hover-lift neon-border relative overflow-hidden group">
                                         <div className="absolute inset-0 bg-gradient-to-br from-neon-blue to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
@@ -231,7 +231,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Insights List */}
+
                         <div className="space-y-6">
                             {filteredInsights.length > 0 ? (
                                 filteredInsights.map(insight => (
@@ -245,11 +245,11 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Sidebar */}
+
                     <div className="lg:col-span-1 space-y-6">
                         <DailySummary results={analysisResults} />
 
-                        {/* How It Works */}
+
                         <div className="glass-effect rounded-2xl p-8 neon-border hover-lift">
                             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
                                 <span className="text-3xl">ℹ️</span>
@@ -275,7 +275,7 @@ export default function Home() {
                             </ol>
                         </div>
 
-                        {/* Demo Note */}
+
                         <div className="glass-effect rounded-2xl p-8 border-2 border-warning border-opacity-40 hover-lift relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-warning rounded-full blur-3xl opacity-10"></div>
                             <div className="relative z-10">

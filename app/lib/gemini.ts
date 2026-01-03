@@ -70,7 +70,7 @@ ${transcription}`;
         const response = await result.response;
         const text = response.text();
 
-        // Extract JSON from markdown code blocks if present
+
         const jsonMatch = text.match(/```json\n([\s\S]*?)\n```/) || text.match(/```\n([\s\S]*?)\n```/);
         const jsonText = jsonMatch ? jsonMatch[1] : text;
 
@@ -108,7 +108,7 @@ ${transcription}`;
 }
 
 export async function generateMockTranscription(): Promise<string> {
-    // For demo purposes when no audio is provided
+
     return `Agent: Thank you for calling VWO support. How can I help you today?
 
 Customer: Hi, I've been using VWO for about 6 months now, and I really love it. But I'm having an issue with the A/B testing dashboard.
