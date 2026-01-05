@@ -24,9 +24,17 @@ In today's high-volume customer support environment, valuable feedback is lost i
 **Signal AI** is an automated intelligence layer for your customer support stack. It ingests audio recordings, transcribes them using Google's Gemini AI, and extracts structured insights automatically.
 
 *   **🎙️ Auto-Transcription**: Converts audio to text with high accuracy.
+<img width="1917" height="989" alt="image" src="https://github.com/user-attachments/assets/621b3f17-b54c-483a-8b3f-acde0141a440" />
+
 *   **🧠 Intelligent Analysis**: Identifies Feature Requests, Bugs, Competitor Mentions, and Case Study opportunities.
+<img width="1914" height="1078" alt="image" src="https://github.com/user-attachments/assets/6a92c7eb-c1f8-4471-bb4e-310b8cdf3c76" />
+
 *   **📊 Structured Data**: Turns unstructured conversation into categorized, prioritized JSON data.
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d364032d-327a-4a1b-9912-f7f3d1d3320e" />
+
 *   **💬 Slack Integration**: Pushes daily summaries directly to your team's workspace.
+<img width="626" height="910" alt="image" src="https://github.com/user-attachments/assets/175a50d9-3cab-42da-926b-64c248774705" />
+
 
 ## 3. Architecture
 
