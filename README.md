@@ -32,16 +32,7 @@ In today's high-volume customer support environment, valuable feedback is lost i
 
 Signal AI uses a serverless Next.js architecture powered by Google Gemini 1.5 Flash for speed and cost-efficiency.
 
-```mermaid
-graph TD
-    User[User] -->|Upload Audio File| Client[Next.js Client]
-    Client -->|POST /api/upload| Server[Next.js API Routes]
-    Server -->|Audio Buffer| Gemini[Google Gemini 1.5 Flash]
-    Gemini -->|Transcription & Analysis| Server
-    Server -->|JSON Insights| Client
-    Client -->|View Dashboard| User
-    Client -->|Send Summary| Slack[Slack Webhook]
-```
+<img width="789" height="884" alt="image" src="https://github.com/user-attachments/assets/bf0a2a8e-10a5-4abf-b896-e4eec39a6b4e" />
 
 ### Tech Stack
 *   **Frontend**: Next.js 14, Tailwind CSS, Framer Motion (animations)
